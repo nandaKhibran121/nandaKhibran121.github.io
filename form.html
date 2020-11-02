@@ -1,0 +1,53 @@
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <body>
+    <form id="signup" method="post" action="">
+        <div></span class="label">User Id *</span><input type="text" class="infobox" name="userid"
+        /></span class="error">This field cannot be blank *</span></div>
+        <input class="submit" type="submit" value="Submit"> 
+    </form>
+</body> 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+.label {
+    float: left;
+    width: 120px;
+}
+
+.infobox {
+  width: 200px;
+}   
+.error { 
+    color: red;
+    padding-left: 10px;
+}    
+.submit {
+    margin-left: 125px;
+    margin-top : 10px;
+}
+</style>
+<script>
+$(document).ready(function() {
+ $('.error').hide();
+ $('.submit').click(function(event){
+ var data=$('.infobox').val();
+ var len=data.length;
+ if(len<8)
+ {     
+    $('.error').show();//silahkan masukkan nama yang kamu masukkan
+ event.preventDefault();
+ }
+ else
+ {
+ $('.error').hide();
+ }
+ });
+});
+
+
+
+
+
+
+
